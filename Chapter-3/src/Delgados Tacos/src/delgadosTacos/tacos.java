@@ -15,35 +15,35 @@ public class tacos
 	public static void main(String[] args)
 	{
 		String response;
-		byte burritos, tacos, churros, nachos, enchiladas, quesadillas, tamales, empanadas, fajitas, pops;
+		int burritos, tacos, churros, nachos, enchiladas, quesadillas, tamales, empanadas, fajitas, pops;
 		
 		tacoTruck();
 		
 		response = JOptionPane.showInputDialog(null, "How many burritos would you like?");
-		burritos = Byte.parseByte(response);
+		burritos = Integer.parseInt(response);
 		response = JOptionPane.showInputDialog(null, "How many tacos would you like?");
-		tacos = Byte.parseByte(response);
+		tacos = Integer.parseInt(response);
 		response = JOptionPane.showInputDialog(null, "How many churros would you like?");
-		churros = Byte.parseByte(response);
+		churros = Integer.parseInt(response);
 		response = JOptionPane.showInputDialog(null, "How many nachos would you like?");
-		nachos = Byte.parseByte(response);
+		nachos = Integer.parseInt(response);
 		response = JOptionPane.showInputDialog(null, "How many enchiladas would you like?");
-		enchiladas = Byte.parseByte(response);
+		enchiladas = Integer.parseInt(response);
 		response = JOptionPane.showInputDialog(null, "How many quesadillas would you like?");
-		quesadillas = Byte.parseByte(response);
+		quesadillas = Integer.parseInt(response);
 		response = JOptionPane.showInputDialog(null, "How many tamales would you like?");
-		tamales = Byte.parseByte(response);
+		tamales = Integer.parseInt(response);
 		response = JOptionPane.showInputDialog(null, "How many empanadas would you like?");
-		empanadas = Byte.parseByte(response);
+		empanadas = Integer.parseInt(response);
 		response = JOptionPane.showInputDialog(null, "How many fajitas would you like?");
-		fajitas = Byte.parseByte(response);
+		fajitas = Integer.parseInt(response);
 		response  = JOptionPane.showInputDialog(null, "How many drinks would you like?");
-		pops = Byte.parseByte(response);
+		pops = Integer.parseInt(response);
 		
 		salesTax(burritos, tacos, churros, nachos, enchiladas, quesadillas, tamales, empanadas, fajitas, pops);
 	}
 
-	public static void salesTax(byte bu, byte ta, byte ch, byte na, byte en, byte qu, byte tam, byte em, byte fa, byte po)
+	public static void salesTax(int bu, int ta, int ch, int na, int en, int qu, int tam, int em, int fa, int po)
 	{
 		DecimalFormat df = new DecimalFormat("0.00");
 		double burritoPrice = 2;
