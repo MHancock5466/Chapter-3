@@ -12,15 +12,15 @@ import java.text.DecimalFormat;
 public class tacos 
 {
 
-	public static void main(String[] args)
+	public static void main(String[] args)																			//Main Method
 	{
-		String response;
-		int burritos, tacos, churros, nachos, enchiladas, quesadillas, tamales, empanadas, fajitas, pops;
+		String response;																							//String used for JOptionPane
+		int burritos, tacos, churros, nachos, enchiladas, quesadillas, tamales, empanadas, fajitas, pops;			//Ints for inputs
 		
-		tacoTruck();
+		tacoTruck();																								//Calling tacoTruck method
 		
-		response = JOptionPane.showInputDialog(null, "How many burritos would you like?");
-		burritos = Integer.parseInt(response);
+		response = JOptionPane.showInputDialog(null, "How many burritos would you like?");							//Question x10 in Input Dialog Boxes
+		burritos = Integer.parseInt(response);																		//Response to Integer x10
 		response = JOptionPane.showInputDialog(null, "How many tacos would you like?");
 		tacos = Integer.parseInt(response);
 		response = JOptionPane.showInputDialog(null, "How many churros would you like?");
@@ -40,13 +40,13 @@ public class tacos
 		response  = JOptionPane.showInputDialog(null, "How many drinks would you like?");
 		pops = Integer.parseInt(response);
 		
-		salesTax(burritos, tacos, churros, nachos, enchiladas, quesadillas, tamales, empanadas, fajitas, pops);
+		salesTax(burritos, tacos, churros, nachos, enchiladas, quesadillas, tamales, empanadas, fajitas, pops);				//Calling salesTax method using user inputs
 	}
 
-	public static void salesTax(int bu, int ta, int ch, int na, int en, int qu, int tam, int em, int fa, int po)
+	public static void salesTax(int bu, int tac, int ch, int na, int en, int qu, int tam, int em, int fa, int po)			//Declaring salesTax method with different inputs
 	{
-		DecimalFormat df = new DecimalFormat("0.00");
-		double burritoPrice = 2;
+		DecimalFormat df = new DecimalFormat("0.00");																		//Creating format for two decimals
+		double burritoPrice = 2;																							//Declaring values for objects
 		double tacoPrice = 1.5;
 		double churroPrice = .75;
 		double nachoPrice = 1.75;
@@ -57,17 +57,20 @@ public class tacos
 		double fajitaPrice = 2.5;
 		double popPrice = 1;
 		double tax = .075;
-		double cost, costTax;
-		cost = (bu * burritoPrice) + (ta * tacoPrice) + (ch * churroPrice) + (na * nachoPrice) + (en * enchiladaPrice) + (qu * quesadillaPrice)
-				+ (tam * tamalePrice) + (em * empanadaPrice) + (fa * fajitaPrice) + (po * popPrice);
-		costTax = cost * tax;
+		double cost, costTax;																								//Declaring cost objects
+		
+		cost = (bu * burritoPrice) + (tac * tacoPrice) + (ch * churroPrice) + (na * nachoPrice) + (en * enchiladaPrice) + 	//Determining cost value
+				(qu * quesadillaPrice) + (tam * tamalePrice) + (em * empanadaPrice) + (fa * fajitaPrice) + (po * popPrice);	
+		
+		costTax = cost * tax;																								//Determining costTax value
+		
 		JOptionPane.showMessageDialog(null, "Your food cost is $" + (df.format(cost)) + ". The sales tax is $" + (df.format(costTax)) + 
-				". Your total price will be $" + (df.format(cost+costTax)) + ".");
+				". Your total price will be $" + (df.format(cost+costTax)) + ".");											//Displaying cost, costTax, and total											
 	}
 	
-	public static void tacoTruck()
+	public static void tacoTruck()															//Declaring method tacoTruck
 	{
-		System.out.println("******************************************");
+		System.out.println("******************************************");					//Displaying the tacoTruck in the console
 		System.out.println("*   TACOS TACOS TACOS TACOS TACOS TACOS   ***");
 		System.out.println("*        *************************           **");
 		System.out.println("*        *                       *             *");
