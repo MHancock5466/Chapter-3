@@ -15,7 +15,7 @@ public class tacos
 	public static void main(String[] args)	//Main Method
 	{
 		String response;	//String used for JOptionPane
-		int burritos, tacos, churros, nachos, enchiladas, quesadillas, tamales, empanadas, fajitas, pops;	//Ints for inputs
+		int burritos, tacos, churros, nachos, enchiladas, quesadillas, tamales, empanadas, fajitas, pops;	//Integers for inputs
 		
 		tacoTruck();	//Calling tacoTruck method
 		
@@ -60,7 +60,7 @@ public class tacos
 		double cost, costTax;	//Declaring cost objects
 		
 		cost = (bu * burritoPrice) + (tac * tacoPrice) + (ch * churroPrice) + (na * nachoPrice) + (en * enchiladaPrice) + 	//Determining cost value
-				(qu * quesadillaPrice) + (tam * tamalePrice) + (em * empanadaPrice) + (fa * fajitaPrice) + (po * popPrice);	
+				(qu * quesadillaPrice) + (tam * tamalePrice) + (em * empanadaPrice) + (fa * fajitaPrice) + (po * popPrice);
 		
 		costTax = cost * tax;	//Determining costTax value
 		
